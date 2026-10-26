@@ -5,6 +5,28 @@ mode: "default"
 
 **Beheer eenvoudig al je websitepagina’s vanuit één centrale omgeving.** Maak nieuwe pagina’s aan, werk bestaande content bij en houd de publicatiestatus van je website overzichtelijk in de gaten. Zo zorg je ervoor dat jouw content altijd actueel en vindbaar blijft.
 
+## Het overzicht
+
+Ga naar **CMS → Pagina's**. Je ziet een overzicht van alle pagina's met hun status en talen.
+
+<Frame caption="Het overzicht van alle pagina's.">
+  <img src="/images/paginas-overzicht.png" alt="Het overzicht van alle pagina's" />
+</Frame>
+
+- **Zoeken**: typ in het veld **Zoeken…** om op titel te zoeken.
+- **Filters**: filter op status (Gepubliceerd, Concept, Aangepast) en, als die er zijn, op categorieën.
+- **Sorteren**: klik op een kolomkop, zoals **Bijgewerkt**, om op die kolom te sorteren.
+- Een **waarschuwingsdriehoek** voor een titel betekent dat de pagina op **Niet vindbaar** (noindex) staat.
+- Onderaan blader je met **Vorige** en **Volgende** door de pagina's.
+
+Achter elke pagina staan drie acties:
+
+| Actie | Wat gebeurt er? |
+| --- | --- |
+| **Oog** | Bekijk de live pagina op je website. Niet zichtbaar bij concepten. |
+| **Kopiëren** | Maakt een kopie van de pagina als concept. |
+| **Prullenbak** | Verwijdert de pagina (zie [Een pagina offline halen of verwijderen](#een-pagina-offline-halen-of-verwijderen)). |
+
 ## Pagina beheren
 
 ![Image](/images/image-18.png "Image")
@@ -13,9 +35,46 @@ Elke pagina is voorzien van een Titel, Url en korte beschrijving. De titel is in
 
 De korte beschrijving wordt gebruikt in collectie-weergaves van pagina's. Wanneer je bijvoorbeeld een verwijzing opneemt naar een aantal vakgebied-pagina's.
 
+### Een pagina toevoegen
+
+<Steps>
+  <Step>
+    Klik op **Nieuwe pagina**.
+  </Step>
+  <Step>
+    Vul de **Titel** van de pagina en de **URL** in, bijvoorbeeld `/over-ons/`. Onder het URL-veld zie je meteen het volledige webadres.
+  </Step>
+  <Step>
+    Vul een **Korte beschrijving** in. Die verschijnt op overzichtspagina's en in kaartjes.
+  </Step>
+  <Step>
+    Voeg secties toe (zie [Werken met secties](/werken-met-secties)) en vul de SEO-gegevens in.
+  </Step>
+  <Step>
+    Klik op **Opslaan**. De pagina wordt aangemaakt als **Concept**.
+  </Step>
+  <Step>
+    Na het opslaan verschijnen de knoppen **Voorbeeld** en **Publiceren**. Controleer de pagina en publiceer haar.
+  </Step>
+</Steps>
+
+<Frame caption="Een nieuwe pagina: bij een nieuw item zie je eerst alleen de knop Opslaan.">
+  <img src="/images/nieuwe-pagina.png" alt="Een nieuwe pagina in de editor" />
+</Frame>
+
+<Note>
+  **Vergeet het menu niet.** Een nieuwe pagina komt niet vanzelf in het navigatiemenu van je website. Voeg haar toe via **CMS → Menu** (zie [Menu](/menu)) of link ernaar vanaf een andere pagina.
+</Note>
+
+### Een pagina bewerken
+
+Klik in het overzicht op de titel van de pagina. De [editor](/editor) opent. Pas aan wat je wilt en klik op **Opslaan** en daarna op **Publiceren**.
+
 ### Secties
 
 Binnen een pagina kunnen diverse soorten secties worden beheerd, zoals tekstblokken met een video, tekst met een illustratie, cases, introductieteksten, logo-overzichten en highlights. Door deze modulaire opbouw kan de inhoud eenvoudig worden aangepast en uitgebreid wanneer de website verandert of nieuwe campagnes worden toegevoegd.
+
+Hoe je secties toevoegt, aanpast, verplaatst en verwijdert, lees je bij [Werken met secties](/werken-met-secties).
 
 ### Opslaan en publiceren
 
@@ -61,6 +120,50 @@ De homepage ondersteunt meerdere talen, waaronder Nederlands en Engels. Hierdoor
   </Column>
 </Columns>
 
+#### Een pagina vertalen
+
+Bestaat je website in meer talen? Dan zie je in het blok **Informatie** de knop **Kopiëren naar EN** (of een andere taal).
+
+<Columns cols={2}>
+  <Column>
+    <Steps>
+      <Step>
+        Sla eerst je wijzigingen op.
+      </Step>
+      <Step>
+        Klik op **Kopiëren naar …**.
+      </Step>
+      <Step>
+        Vink eventueel **automatisch vertalen** aan.
+      </Step>
+      <Step>
+        Klik op **OK**. De pagina opent in de nieuwe taal.
+      </Step>
+      <Step>
+        Controleer de tekst en publiceer.
+      </Step>
+    </Steps>
+  </Column>
+  <Column>
+    <Frame caption="Een pagina naar een andere taal kopiëren.">
+      <img src="/images/pagina-kopieren-taal.png" alt="Het venster om een pagina naar een andere taal te kopiëren" />
+    </Frame>
+  </Column>
+</Columns>
+
+<Warning>
+  **Automatisch vertaald = altijd nakijken.** Machinevertalingen zijn niet perfect. Lees de vertaalde tekst altijd na. Categorieën, locaties, personen en organisaties worden niet meegekopieerd; die koppel je opnieuw.
+</Warning>
+
 ### Seo
 
 Daarnaast biedt de homepage ondersteuning voor zoekmachineoptimalisatie (SEO). Per pagina kan een SEO-titel en meta-omschrijving worden ingesteld. Deze informatie wordt gebruikt door zoekmachines en kan ook worden weergegeven wanneer de pagina wordt gedeeld via sociale media of andere externe kanalen. Een correcte invulling van deze gegevens draagt bij aan een betere vindbaarheid en een professionele presentatie van de website.
+
+## Een pagina offline halen of verwijderen
+
+- **Tijdelijk offline**: open de pagina en klik op **Inactief**. De pagina blijft bewaard als concept en je kunt haar later opnieuw publiceren.
+- **Definitief verwijderen**: klik in het overzicht op de prullenbak achter de pagina. Je browser vraagt: "Weet je zeker dat je deze pagina wilt verwijderen?" Klik op **OK** om te bevestigen.
+
+<Danger>
+  **Verwijderen is definitief.** Een verwijderde pagina kun je niet terughalen. Twijfel je? Zet de pagina dan op **Inactief**. Controleer ook of er nog links of menu-items naar de pagina verwijzen.
+</Danger>
