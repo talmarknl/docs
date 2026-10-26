@@ -1,0 +1,45 @@
+---
+title: "Product update #0013"
+---
+
+<sup>1 juli, 2026</sup>
+
+Deze release staat volledig in het teken van stabiliteit en verbeteringen achter de schermen. We hebben het bouwproces van de websites grondig herzien. Geen overlappende bouwproblemen meer, en kleinere updates voor snellere herlaadtijden van de preview. Je zult merken dat je niet langer eindeloos naar het draaiende laadpictogram hoeft te staren wanneer je je pagina’s opslaat 🎉
+
+Wat hebben we de afgelopen maand nog meer gedaan...
+
+## Koppen en reactieve editors
+
+<video src="/videos/headings-and-reactive-editor.mp4" controls />
+
+We hebben een handige verbetering aan onze editor toegevoegd, zodat je kopjes kunt toevoegen op plaatsen waar we denken dat je ze nodig zult hebben. Bovendien reageren de knoppen in de editor nu op de positie van je cursor. Zo kun je gemakkelijk zien welke opties in de tekst zijn toegepast.
+
+## Voorkomen dat pagina’s worden geïndexeerd of gevonden
+
+<Columns cols={2}>
+  <Column>
+    <Frame>
+      <img
+        src="/images/image-3.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+      />
+    </Frame>
+  </Column>
+  <Column>
+    Als je “Niet vindbaar” selecteert, wordt de pagina uitgesloten van de sitemap.xml en krijgt deze ook een “nofollow, noindex”-tag. Dit betekent dat zoekmachines zoals Google deze pagina niet zullen crawlen en indexeren.
+
+    Ook zijn deze pagina’s niet meer te vinden via de zoekfunctie op de website.
+
+    <Note>
+      Als deze instelling voor een pagina is ingeschakeld, zie je ook een ⚠️pictogram in de lijstweergave in Lumo.
+    </Note>
+  </Column>
+</Columns>
+
+## Overige verbeteringen
+
+- We hebben het aantal tekens dat in een tekstveld kan worden ingevoerd beperkt tot 255. Zo wordt de tekst niet afgekapt bij het opslaan.
+- De status na publicatie was onjuist, dus hebben we dat gecorrigeerd.
+- Een bug is verholpen waarbij het verwijderen van een sectie ervoor zorgde dat de inhoud in een andere sectie terechtkwam.

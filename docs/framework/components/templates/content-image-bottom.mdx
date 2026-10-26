@@ -1,0 +1,20 @@
+---
+title: "ContentImageBottom"
+---
+
+The `content-image-bottom` template is used to create a section that contains an image below the content. The following fields are used from STRAPI.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| reference | Text | Reference to the section, will be applied as ID |
+| themeColor | Text | Field that contains the class for color variations |
+| header | Header | Main header field (\+ option for header size) |
+| subHeader | Header | Sub header field (\+ option for header size) |
+| content | Text | Large text field that can contain HTML |
+| image | Media | Media component that contains information about the image to display |
+| buttons | Button\[\] | Optional button(s) to show in the template |
+| eyes | KV\[\] | For extending the existing template |
+
+<Info>
+  KV is a KeyValue pair where the value is of type "JSON". So it can contain any kind of value
+</Info>

@@ -1,0 +1,37 @@
+---
+title: "Introduction"
+---
+
+ImageKit is used within Lumo to deliver, optimize, and transform images efficiently. By leveraging ImageKit, images are automatically served through a global CDN, improving loading times and ensuring a consistent experience across devices. Proper configuration is required to ensure images are uploaded and delivered according to the platform standards.
+
+### Required Configuration
+
+Before using ImageKit, make sure the following default settings are configured in your ImageKit account.
+
+#### Image Optimization
+
+Navigate to: **Images → Optimization**
+
+Set the following option:
+
+| Setting | Value |
+| :-- | :-- |
+| Use best format for Image Delivery | `false` |
+
+#### Default Upload Parameters
+
+Navigate to: **Media Library → Default upload parameters**
+
+Set the following option:
+
+| Setting | Value |  |
+| :-- | :-- | --- |
+| Pre transformation | `w-2560,h-2560,c-at_max` |  |
+
+This pre-transformation ensures that uploaded images are automatically constrained to a maximum width and height of **2560 pixels** while maintaining their original aspect ratio. This helps reduce storage usage and optimize image delivery performance without unnecessarily increasing image dimensions.
+
+> **Important:** These settings must be applied before uploading images to ensure consistent behavior across all environments and prevent unexpected image transformations.
+
+## Default folders
+
+If the ImageKit account will be used for a Lumo-website the default folder "web" should be addded.

@@ -1,0 +1,208 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Lumo",
+  "colors": {
+    "primary": "#00ad95",
+    "light": "#00ad95",
+    "dark": "#00ad95"
+  },
+  "favicon": {
+    "light": "/images/favicon.svg",
+    "dark": "/images/favicon.svg"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "nl",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "HANDLEIDING",
+            "pages": [
+              {
+                "group": "Aan de slag",
+                "public": true,
+                "pages": [
+                  "index"
+                ]
+              },
+              {
+                "group": "CMS",
+                "pages": [
+                  "cms/introductie",
+                  "homepage",
+                  "paginas",
+                  {
+                    "group": "Secties",
+                    "pages": [
+                      "werken-met-secties",
+                      "introductietekst",
+                      "tekst-in-blokken"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Wijzigingen",
+                "public": true,
+                "pages": [
+                  "lumo-updates/product-updates",
+                  {
+                    "group": "Artikelen",
+                    "public": true,
+                    "pages": [
+                      "lumo-updates/release-15",
+                      "lumo-updates/release-v1-14-0",
+                      "lumo-updates/release-v1-13-0",
+                      "lumo-updates/release-12",
+                      "lumo-updates/release-11",
+                      "lumo-updates/release-10"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "DOCS",
+            "pages": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "docs/getting-started/introduction",
+                  "docs/getting-started/quickstart"
+                ]
+              },
+              {
+                "group": "ImageKit",
+                "pages": [
+                  "docs/imagekit/introduction"
+                ]
+              },
+              {
+                "group": "Framework",
+                "pages": [
+                  "docs/framework/introduction",
+                  "docs/framework/creating-pages",
+                  {
+                    "group": "Components",
+                    "pages": [
+                      {
+                        "group": "Alpine",
+                        "pages": [
+                          "docs/framework/components/alpine/introduction"
+                        ]
+                      },
+                      {
+                        "group": "Atoms",
+                        "pages": []
+                      },
+                      {
+                        "group": "Molecules",
+                        "pages": []
+                      },
+                      {
+                        "group": "Organisms",
+                        "pages": []
+                      },
+                      {
+                        "group": "Templates",
+                        "pages": [
+                          "docs/framework/components/templates/introduction",
+                          "docs/framework/components/templates/cover-image",
+                          "docs/framework/components/templates/cover-video",
+                          "docs/framework/components/templates/content",
+                          "docs/framework/components/templates/content-background-image",
+                          "docs/framework/components/templates/content-background-video",
+                          "docs/framework/components/templates/content-blocks-content",
+                          "docs/framework/components/templates/content-blocks-image",
+                          "docs/framework/components/templates/content-blocks-video",
+                          "docs/framework/components/templates/content-columns",
+                          "docs/framework/components/templates/content-split",
+                          "docs/framework/components/templates/content-image-left",
+                          "docs/framework/components/templates/content-image-right",
+                          "docs/framework/components/templates/content-image-bottom",
+                          "docs/framework/components/templates/content-video-left",
+                          "docs/framework/components/templates/content-video-right",
+                          "docs/framework/components/templates/content-video-bottom",
+                          "docs/framework/components/templates/content-gallery-image",
+                          "docs/framework/components/templates/content-gallery-video",
+                          "docs/framework/components/templates/content-logo-slider",
+                          "docs/framework/components/templates/untitled-page",
+                          "docs/framework/components/templates/content-form"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Cookbook",
+                "pages": [
+                  "docs/cookbook/cool-stuff-we-ve-built"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "pages": [
+              {
+                "group": "Getting started",
+                "pages": []
+              },
+              {
+                "group": "LUMO-MS-JOBALERT",
+                "pages": [
+                  "api/lumo-ms-jobalert/introduction",
+                  "api/lumo-ms-jobalert/environment-variables"
+                ]
+              },
+              {
+                "group": "LUMO-MS-TRANSLATE",
+                "openapi": "https://lumo-ms-translate-production.up.railway.app/openapi",
+                "pages": [
+                  "api/lumo-ms-translate/introduction"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://app.mintlify.com"
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "background": {
+    "decoration": "gradient"
+  },
+  "fonts": {
+    "family": "Inter"
+  },
+  "styling": {
+    "eyebrows": "section"
+  }
+}

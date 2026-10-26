@@ -1,0 +1,41 @@
+---
+title: "Introduction"
+---
+
+This part of the documentation explains how to get started on developing a Lumo website project.
+
+Lumo-websites are Static websites build using the [Lume](https://lume.land) Static Site Generator and uses a predefined STRAPI back-end to provide for data.
+
+## Why Lume?
+
+Our mission from the start was to use a static site generator. Because nothing can be served as fast as static content. It's secure by design and still allows for creating great websites.
+
+Next goals was ease of use, and Lume doesn't force a specific templating language and is very customisable in the way you create static content. It also doesn't limit to only creating HTML. Based on incoming data you can create any file type.
+
+Major benefit was that Lume had remote-files build in. You can specify that a certain file exists on a different location. This was essential for our idea of a shared base framework.
+
+## The Lumo Website Starter
+
+All lumo-websites are based on the `lumo-website-starter` template and make use of the `lumo-website-framework` project. This is the base template that automatically loads all default templates, styling and data that is commonly used in a website.
+
+When you start with a project the `lumo-website-starter` provides everything needed to get you going. This includes:
+
+```shellscript
+/src
+	/_components		# contains custom and transfered components
+	/_data				# contains translations and settings
+	/collections		# used for creating collection pages
+	/css				# contains all default .addon.css files
+	/js					# standard js files
+	/public				# public files copied to output folder
+	_data.yml			# project settings
+	deeplinks.page.ts	# to generate short-links for job-postings
+	favicon.svg			# favicon (auto-converts to required images)
+Dockerfile 				# used to build the docker image
+_config.ts				# starting configuration of the website
+deno.json				# contains task and packages
+import_map.json			# references to lume and lumo-website-framework
+redirects.json			# to specify fixed redirects
+server.ts				# starting point for a hosted website
+setup.ts				# ran during docker build
+```

@@ -1,0 +1,48 @@
+---
+title: "Quickstart"
+description: "Begin with a fresh template"
+---
+
+To get going quickly start the create a new repository by using [talmarknl/lumo-website-starter](https://github.com/talmarknl/lumo-website-starter) as a template.
+
+<Warning>
+  Make sture to only include the **Main** branch
+</Warning>
+
+## Prerequisites
+
+Before you begin, you must have:
+
+- At least Deno 2.8.0 installed
+- A github personal acces token wich can be requested from SteamTalmark
+- Lumo-Cms STRAPI instance running locally or in the Cloud
+
+## Get started
+
+<Steps>
+  <Step title="Clone the newly created repository">
+    Describe how to install your product or sign up.
+
+    ```bash
+    gh repo clone talmarknl/{repository-name}
+    ```
+  </Step>
+  <Step title="Configure .env file">
+    copy the `.env.example` file and add the following variables
+
+    ```dotenv
+    DENO_AUTH_TOKENS="{GITHUB_PERSONAL_ACCESSTOKEN}@raw.githubusercontent.com"
+    STRAPI_HOSTNAME="{URL TO STRAPI INSTANCE}"
+    
+    ## public environment variables ##
+    PUBLIC_LUMO_MS_GEOCODING=https://lumo-ms-geocoding-production.up.railway.app
+    ```
+  </Step>
+  <Step title="Run it">
+    To start the project and serve it locally
+
+    ```bash
+    deno task serve
+    ```
+  </Step>
+</Steps>

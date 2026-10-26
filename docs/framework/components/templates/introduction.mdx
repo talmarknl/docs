@@ -1,0 +1,96 @@
+---
+title: "Introduction"
+---
+
+**Template**-components are a direct reflection of a template component in **STRAPI**. These templates are loaded based on there presence in the Sections dynamiczone on the Homepage or Pages.
+
+## Custom templates
+
+There is a standard way of creating custom templates. This requires a ContentCustom template in STRAPI where the field instance is filled. For example:
+
+<Frame>
+  ![Image](/images/image-5.png)
+</Frame>
+
+A ContentCustom template has the 2 base fields reference and themeColor, the instance defines the differentiation between Custom Templates. All other fields are defined in the eyes property wich can contain KeyValue pairs. As you can see the value is of type JSON so it can also contain an array of objects.
+
+Custom templates are always created on a project-base. So there is no default setup in the Framework available.
+
+To create the corresponding template in your project you add the file `~/src/_components/templates/content-custom~{instance}.tsx` 
+
+Below a sample of a `content-custom-ctaButtons.tsx` file that renders CTA blocks with a slider option.
+
+```jsx
+import { TemplateContentBlocks } from "@/types/index.ts";
+import { Eye } from "@/types/index.ts";
+
+export default function (data: Lume.Data & TemplateContentBlocks, helpers: Lume.Helpers) {
+  const comp = data.comp;
+  const splideTrackId = `splide-${globalThis.crypto.randomUUID()}-track`;
+  const settings: ContentBlocksSetting = data.settings.content?.blocksCTA || {};
+  // map eye settings from data.eyes to data as properties;
+  if (data.eyes) {
+    (data.eyes as Eye[]).forEach((eye: Eye) => {
+      data[eye.key] = typeof eye.value === "string" ? JSON.parse(eye.value) : eye.value;
+    });
+  }
+  return (
+    <section class={`templateBlocks cta ${data.themeColor}`} id={data.reference || undefined}>
+      <div class="container">
+        <div class="inner">
+          {(data.header || data.subHeader || data.content) && (
+            <comp.molecules.introblock header={data.header} subHeader={data.subHeader} content={data.content} />
+          )}
+          <div class="grid">
+            <div class="splide" role="group" data-splide-state={settings?.splideState} data-splide={JSON.stringify(settings?.splideSettings)}>
+              <div class="splide__track" id={splideTrackId}>
+                <div class={`splide__list ${data.blocks && data.blocks.length > 1 && `slides-${data.blocks.length}`}`}>
+                  {data.blocks && data.blocks.length > 0 && data.blocks.map((block, index) => (
+                    <div class="splide__slide item" key={index}>
+                      <comp.organisms.block.content {...block} />
+                    </div>
+                  ))}
+                </div>
+
+                <div class="splide__arrows splide__arrows--ltr">
+                  <button class="splide__arrow splide__arrow--prev"
+                    type="button"
+                    aria-label="Previous slide"
+                    aria-controls={splideTrackId}>
+                      <comp.atoms.icon icon="arrow-backward"></comp.atoms.icon>
+                  </button>
+                  <button
+                    class="splide__arrow splide__arrow--next"
+                    type="button"
+                    aria-label="Next slide"
+                    aria-controls={splideTrackId}>
+                      <comp.atoms.icon icon="arrow-forward"></comp.atoms.icon>
+                  </button>
+                </div>
+                <ul class="splide__pagination"></ul>
+              </div>
+            </div>
+          </div>
+
+          {data.buttons && Array.isArray(data.buttons) && data.buttons.length > 0 && (
+            <div class="buttons">
+              {data.buttons.map((b) => (
+                <comp.atoms.link {...b} class="button"></comp.atoms.link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+    <link rel="stylesheet" href="/css/templates/custom.blockscta.css" remove-duplicate />
+    <link rel="stylesheet" href="/css/templates/blocks.css" remove-duplicate />
+    <link rel="stylesheet" href="/css/templates/blocks.addon.css" remove-broken remove-duplicate />
+    <link rel="stylesheet" href="/css/organisms/slider.css" remove-broken remove-duplicate />
+    <link rel="stylesheet" href="/css/organisms/slider.addon.css" remove-broken remove-duplicate />
+    <script type="module" src="/js/gallery.js" remove-broken remove-duplicate ></script>
+    <script type="module" src="/js/slider.js" remove-broken remove-duplicate> </script>
+
+    </section>
+  );
+}
+```

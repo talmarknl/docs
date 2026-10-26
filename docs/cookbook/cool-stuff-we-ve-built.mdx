@@ -1,0 +1,41 @@
+---
+title: "Cool stuff we've built"
+---
+
+This section serves as a library of useful frontend solutions gathered from previous projects. Here you’ll find reusable HTML templates, CSS styling patterns, JavaScript utilities, and interactive components that can help solve common development challenges.<br />Rather than starting from scratch, developers can use these examples as building blocks, adapt them to their needs, and learn from implementations that have already proven successful in production environments.
+
+## Reading progress bar
+
+<CodeGroup>
+
+```html html
+<div class="bar"></div>
+```
+
+```css css
+:root {
+	--color2: #fd638b;
+}
+.bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+
+      width: 100%;
+      height: 6px;
+      background: var(--color2);
+
+      transform-origin: left;
+      animation: fill linear;
+      animation-duration: 1s;
+      animation-timeline: scroll();
+  }
+
+  @keyframes fill {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+  }
+```
+
+</CodeGroup>

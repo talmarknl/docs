@@ -1,0 +1,27 @@
+---
+title: "Introduction"
+---
+
+LUMO-MS-JOBALERT is a microservice that handles job-alert subscriptions and sending the job-alert messages to the subscribers.
+
+The application runs as a docker-image and exposes multiple API-endpoints on the `/subscribers` endpoint.
+
+## ENVIRONMENT variables
+
+## Authentication
+
+Every request requires a Authorization Bearer token in the request that matches te token set in the ENVIRONMENT variables.
+
+## API-endpoints
+
+<Accordion title="GET /subscribers">
+  return a list of all subscribers
+</Accordion>
+
+<Accordion title="GET /subscribers/:email">
+  return a single subscriber based on the given e-mailadress
+</Accordion>
+
+<Accordion title="POST /subscribers">
+  Adds a new subscriber
+</Accordion>

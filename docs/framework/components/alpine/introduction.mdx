@@ -1,0 +1,26 @@
+---
+title: "Introduction"
+---
+
+**Alpine**-components are used by the frontend library [Alpine.js](https://alpinejs.dev/). These files are mostly embedded in a \<template\> element on the website to be used in iteration options.
+
+For example in the page `search.page.tsx` there is a default setup where the Alpine-components for JobPostings and Pages are loaded.
+
+```html
+<template x-ref="templateJobPosting">
+    <data.comp.alpine.collection.jobposting />
+</template>
+<template x-ref="templatePage">
+    <data.comp.alpine.collection.page />
+</template>
+```
+
+These templates are used in a x-for loop to render the content on the client-side:
+
+```html
+<template
+    x-for="(item, index) in filterSearchResults('jobposting').slice(0,6)"
+    x-bind:key="index">
+    <div class="item" x-html="$refs.templateJobPosting.innerHTML"></div>
+</template>
+```

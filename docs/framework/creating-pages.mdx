@@ -1,0 +1,88 @@
+---
+title: "Creating pages"
+---
+
+There are multiple ways to create pages in a Lumo-website project. The most common way is by using the STRAPI backend. Here we have defined the single type "Homepage" and the collection type "Pages".
+
+## STRAPI based pages
+
+Both "Homepage" and "Page" are structured with the same model. Difference is a homepage can only be a single instance and Pages can have multiple. Both support multi-language by default. The default locale will be a the root of the domain. Other locales will have a `/{locale}/` prefix.
+
+### Fields
+
+A homepage or page in STRAPI contains the following fields:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| baseFields | Component | Shared definition for commonly used fields |
+| baseFields.name\* | Text | Name of the page |
+| baseFields.slug\* | Text | URL fragment (starts and ends with `/`) |
+| baseFields.abstract | Memo | Short description of the Page |
+| baseFields.url | text | alternative URL |
+| baseFields.images | component | images |
+| baseFields.categories | Relation | Relations to Categories |
+| baseFields.eyes | KeyValuePairs | Extension fields for custom property/values |
+| baseFields.seo | Component | Seo component |
+| baseFields.seo.title\* | text | Title |
+| baseFields.seo.description\* | Memo | Meta description |
+| baseFields.seo.images | component | images for SEO purposes |
+| baseFields.seo.noIndex | bool | to define if this page can be found |
+| sections | dynamiczone | Can contain any of the available components |
+
+<Note>
+  \*) fields are Required
+</Note>
+
+To publish the Homepage single type with a slug that contains: `/`
+
+### Sections
+
+The dynamiczone Sections is where the content of the page is created. Every available Component that can be added in the Sections has a corresponding template in the Framework. These are located at `/src/components/templates`
+
+When you add a Component to the sections field the corresponding template will be loaded and the data from the STRAPI component will be applied to the template.
+
+## Custom pages
+
+Besides creating pages through Strapi, Lumo also supports **file-based pages** using `*.page.tsx` files. These files are processed by **Lume SSG** during the build and become static pages in the generated website.
+
+### When to use a `*.page.tsx` page
+
+Use a page component when:
+
+- The content is fully developer-controlled.
+- The page doesn't need to be managed through Strapi.
+- The page requires custom logic or data fetching.
+- You need landing pages, campaign pages, utilities, redirects, or application-specific content.
+
+For content that editors should manage themselves, prefer the Strapi-based Page and Homepage content types.
+
+### File Location
+
+Pages are typically placed somewhere inside the `src` directory and must follow the naming convention:
+
+```text
+src/
+└─ example.page.tsx
+```
+
+Lume automatically discovers files ending in `.page.tsx` and generates a corresponding route.
+
+### Basic Page Example
+
+```tsx
+// set the layout used
+export const layout = "layouts/main.tsx";
+// set the output URL
+export const url = "/example/";
+// class to add to the body tag
+export const bodyClass = "example";
+
+export default function ExamplePage(data: Lume.Data, helpers: Lume.Helpers) {
+  return (
+    <>
+      <h1>Students</h1>
+      <p>Welcome to our student program.</p>
+    </>
+  );
+}
+```
