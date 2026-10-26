@@ -58,7 +58,8 @@
                       "tekst-in-blokken"
                     ]
                   }
-                ]
+                ],
+                "public": true
               },
               {
                 "group": "Wijzigingen",
