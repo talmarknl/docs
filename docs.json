@@ -40,6 +40,7 @@
               },
               {
                 "group": "CMS",
+                "public": true,
                 "pages": [
                   "cms/introductie",
                   "editor",
@@ -52,6 +53,7 @@
                   "categorieen",
                   {
                     "group": "Secties",
+                    "public": true,
                     "pages": [
                       "werken-met-secties",
                       "introductietekst",
