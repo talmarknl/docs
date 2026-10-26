@@ -63,6 +63,13 @@
                 ]
               },
               {
+                "group": "Inzichten",
+                "public": true,
+                "pages": [
+                  "lumo-ai"
+                ]
+              },
+              {
                 "group": "Samenwerking",
                 "public": true,
                 "pages": [
