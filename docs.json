@@ -33,15 +33,23 @@
                 "group": "Aan de slag",
                 "public": true,
                 "pages": [
-                  "index"
+                  "index",
+                  "inloggen",
+                  "dashboard"
                 ]
               },
               {
                 "group": "CMS",
                 "pages": [
                   "cms/introductie",
+                  "editor",
                   "homepage",
                   "paginas",
+                  "collecties",
+                  "media",
+                  "formulieren",
+                  "menu",
+                  "categorieen",
                   {
                     "group": "Secties",
                     "pages": [
