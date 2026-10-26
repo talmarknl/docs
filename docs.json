@@ -63,6 +63,13 @@
                 ]
               },
               {
+                "group": "Samenwerking",
+                "public": true,
+                "pages": [
+                  "tickets"
+                ]
+              },
+              {
                 "group": "Wijzigingen",
                 "public": true,
                 "pages": [
