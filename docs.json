@@ -30,6 +30,25 @@
             "tab": "HANDLEIDING",
             "pages": [
               {
+                "group": "Wijzigingen",
+                "public": true,
+                "pages": [
+                  "lumo-updates/product-updates",
+                  {
+                    "group": "Artikelen",
+                    "public": true,
+                    "pages": [
+                      "lumo-updates/release-15",
+                      "lumo-updates/release-v1-14-0",
+                      "lumo-updates/release-v1-13-0",
+                      "lumo-updates/release-12",
+                      "lumo-updates/release-11",
+                      "lumo-updates/release-10"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Aan de slag",
                 "pages": [
                   "index",
@@ -71,25 +90,6 @@
                 "group": "Samenwerking",
                 "pages": [
                   "tickets"
-                ]
-              },
-              {
-                "group": "Wijzigingen",
-                "public": true,
-                "pages": [
-                  "lumo-updates/product-updates",
-                  {
-                    "group": "Artikelen",
-                    "public": true,
-                    "pages": [
-                      "lumo-updates/release-15",
-                      "lumo-updates/release-v1-14-0",
-                      "lumo-updates/release-v1-13-0",
-                      "lumo-updates/release-12",
-                      "lumo-updates/release-11",
-                      "lumo-updates/release-10"
-                    ]
-                  }
                 ]
               }
             ]
