@@ -31,7 +31,6 @@
             "pages": [
               {
                 "group": "Aan de slag",
-                "public": true,
                 "pages": [
                   "index",
                   "inloggen",
@@ -40,7 +39,6 @@
               },
               {
                 "group": "CMS",
-                "public": true,
                 "pages": [
                   "cms/introductie",
                   "editor",
@@ -65,14 +63,12 @@
               },
               {
                 "group": "Inzichten",
-                "public": true,
                 "pages": [
                   "lumo-ai"
                 ]
               },
               {
                 "group": "Samenwerking",
-                "public": true,
                 "pages": [
                   "tickets"
                 ]
