@@ -75,7 +75,8 @@
                       "werken-met-secties",
                       "introductietekst",
                       "tekst-in-blokken"
-                    ]
+                    ],
+                    "hidden": true
                   }
                 ]
               },
