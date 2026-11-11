@@ -38,6 +38,7 @@
                     "group": "Artikelen",
                     "public": true,
                     "pages": [
+                      "lumo-updates/product-update-0017",
                       "lumo-updates/release-16",
                       "lumo-updates/release-15",
                       "lumo-updates/release-v1-14-0",
